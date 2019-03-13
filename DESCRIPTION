@@ -1,13 +1,15 @@
 Package: DataStructures
 Type: Package
-Title: General data structures and algorithms
+Title: Useful Data Structures and Algorithms
 Version: 1.0
-Date: 2015-09-16
+Date: 2019-03-13
 Authors@R: c(
     person("Maciej", "Bartoszuk", role = "aut",
-    email = "bartoszuk@rexamine.com"),
+    email = "bartoszuk@rexamine.com",
+    comment = c(ORCID = "0000-0001-6088-8273")),
     person("Marek", "Gagolewski", role = c("aut", "cre"),
-    email = "gagolews@rexamine.com")
+    email = "marek@gagolewski.com",
+    comment = c(ORCID = "0000-0003-0637-6028"))
     )
 Description: Provides various data structures, like stack, queue,
     Vintage Point metric tree (vp-tree), etc.
