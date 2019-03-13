@@ -14,6 +14,8 @@ Authors@R: c(
 Description: Provides various data structures, like stack, queue,
     Vintage Point metric tree (vp-tree), etc.
 License: GPL (>= 3)
+Depends: R (>= 3.1.0)
 Imports: Rcpp (>= 0.12.0)
 LinkingTo: Rcpp (>= 0.12.0), BH
 SystemRequirements: C++11
+RoxygenNote: 6.1.1

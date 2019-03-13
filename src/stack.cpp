@@ -68,6 +68,7 @@ SEXP stack_create() {
 //'
 //' @return
 //' \code{as.list.Stack} returns an R list object.
+//'
 //' @param stack a stack object
 // [[Rcpp::export("as.list.Stack")]]
 List stack_as_list(SEXP stack) {

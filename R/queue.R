@@ -30,8 +30,6 @@ print.Queue <- function(queue, ...)
 #' @return
 #' \code{format.Queue} returns the character representation
 #' of the objects in the queue
-#'
-#' @param ... other arguments passed to or from other methods
 format.Queue <- function(queue, ...)
 {
    format(as.list.Queue(queue), ...)

@@ -31,8 +31,6 @@ print.Stack <- function(stack, ...)
 #' @return
 #' \code{format.Stack} returns the character representation
 #' of the objects in the stack.
-#'
-#' @param ... other arguments passed to or from other methods
 format.Stack <- function(stack, ...)
 {
    format(as.list.Stack(stack), ...)

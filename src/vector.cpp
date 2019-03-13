@@ -51,6 +51,7 @@ void checkIsVectorClass(XPtr< V >& _stack)
 //'
 //' @return
 //' \code{as.list.Vector} returns an R list object.
+//'
 //' @param vec a vector object
 // [[Rcpp::export("as.list.Vector")]]
 List vector_as_list(SEXP vec) {
@@ -69,6 +70,8 @@ List vector_as_list(SEXP vec) {
 //'
 //' @return
 //' \code{vector_create} returns a new, empty vector.
+//'
+//' @param n vector size
 // [[Rcpp::export]]
 SEXP vector_create(int n=0) {
    V* vec = new V(n);
@@ -135,7 +138,7 @@ RObject& vector_back(SEXP vec) {
    return (*_vec).back();
 }
 
-//' @rdname stack
+//' @rdname vector
 //' @details
 //' \code{vector_push_back} pushes a given object at the end of the vector.
 //'
@@ -151,7 +154,7 @@ void vector_push_back(SEXP vec, RObject obj) {
    (*_vec).push_back(obj);
 }
 
-//' @rdname stack
+//' @rdname vector
 //' @details
 //' \code{vector_pop_back} removes the last element in the vector, effectively
 //' reducing the container size by one.
@@ -176,8 +179,6 @@ void vector_pop_back(SEXP vec) {
 //'
 //' @return
 //' \code{vector_at} returns a single RObject value.
-//'
-//' @param i position i in the vector
 // [[Rcpp::export]]
 RObject& vector_at(SEXP vec, int i) {
    XPtr< V > _vec = Rcpp::as< XPtr< V > > (vec);
@@ -192,8 +193,7 @@ RObject& vector_at(SEXP vec, int i) {
 //' @return
 //' \code{vector_set_at} does not return anything interesting.
 //'
-//' @param i position i in the vector
-//' @param obj an R object
+//' @param i position in the vector
 // [[Rcpp::export]]
 void vector_set_at(SEXP vec, int i, RObject obj) {
    XPtr< V > _vec = Rcpp::as< XPtr< V > > (vec);

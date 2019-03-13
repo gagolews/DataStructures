@@ -29,8 +29,6 @@ print.Vector <- function(vec, ...)
 #' @return
 #' \code{format.Vector} returns the character representation
 #' of the objects in the vector.
-#'
-#' @param ... other arguments passed to or from other methods
 format.Vector <- function(vec, ...)
 {
    format(as.list.Vector(vec), ...)
@@ -42,8 +40,6 @@ format.Vector <- function(vec, ...)
 #'
 #' @return
 #' \code{[.Vector} returns a single R object.
-#'
-#' @param i position i in the vector
 `[.Vector` <- function(vec, i)
 {
    vector_at(vec,i)
@@ -56,7 +52,6 @@ format.Vector <- function(vec, ...)
 #' @return
 #' \code{[<-.Vector} returns a modified vector
 #'
-#' @param i position i in the vector
 #' @param value object to set
 `[<-.Vector` <- function(vec, i, value)
 {
@@ -70,9 +65,6 @@ format.Vector <- function(vec, ...)
 #'
 #' @return
 #' \code{vector_at<-} returns a modified vector
-#'
-#' @param i position i in the vector
-#' @param value object to set
 "vector_at<-" <- function(vec, i, value)
 {
    vector_set_at(vec,i,value)
